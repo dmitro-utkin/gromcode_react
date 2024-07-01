@@ -17,7 +17,7 @@ const rootElement = document.querySelector("#root");
 //   );
 // };
 
-class Search extends Component {
+export class Search extends Component {
   render() {
       return (
     <div className="search">
