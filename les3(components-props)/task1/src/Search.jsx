@@ -6,7 +6,7 @@ import "./search.scss";
 const rootElement = document.querySelector("#root");
 
 export const Search = (props) => {
-  const element = (
+  return (
     <div className="search">
       <h1 className="search__title">{`Hello, ${props.name}. What to search for you?`}</h1>
       <div className="search__field">
@@ -15,8 +15,6 @@ export const Search = (props) => {
       </div>
     </div>
   );
+};
 
-  return element;
-}
-
-ReactDOM.render(<Search name="Tom"/>, rootElement);
+ReactDOM.render(<Search name="Tom" />, rootElement);
