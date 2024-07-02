@@ -8,12 +8,13 @@ const userInfo = {
 
 const App = () => {
   return (
-    <Comment 
-      author={userInfo} 
-      text="Good job" 
-      date={new Date()}
-    />
+    <>
+      <Comment 
+        author={userInfo} 
+        text="Good job" 
+        date={new Date()}
+      />
+    </>
   );
 };
-
 export default App;
