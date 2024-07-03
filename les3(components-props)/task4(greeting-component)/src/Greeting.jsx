@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 import moment from "moment";
-import './greeting.scss';
+import "./greeting.scss";
 
 function Greeting({ props }) {
-  const { firstName, lastName, age } = props;
+  const { firstName, lastName, birthDate } = props;
 
-    const calculateAge = (age) => {
-      const today = moment();
-      const birth = moment(age);
-      const birthDate = today.diff(birth, 'years');
-      return birthDate;
-    };
-  
-    const birthDate = calculateAge(age);
-  
+  const calculateAge = (birthDate) => {
+    const today = moment();
+    const birth = moment(birthDate);
+    const age = today.diff(birth, 'years');
+    return age;
+  };
+
+  const age = calculateAge(birthDate);
+
   return (
     <div className="greeting">
-      My name is {firstName} {lastName}. I am {birthDate} years old.
+      My name is {firstName} {lastName}. I am {age} years old.
     </div>
   );
 }
