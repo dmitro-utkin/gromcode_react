@@ -5,7 +5,6 @@ import './greeting.scss';
 function Greeting({ props }) {
   const { firstName, lastName, birthDate } = props;
 
-    // Обчислюємо вік на основі дати народження
     const calculateAge = (birthDate) => {
       const today = moment();
       const birth = moment(birthDate);
