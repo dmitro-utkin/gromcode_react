@@ -3,20 +3,20 @@ import moment from "moment";
 import './greeting.scss';
 
 function Greeting({ props }) {
-  const { firstName, lastName, birthDate } = props;
+  const { firstName, lastName, age } = props;
 
-    const calculateAge = (birthDate) => {
+    const calculateAge = (age) => {
       const today = moment();
-      const birth = moment(birthDate);
-      const age = today.diff(birth, 'years');
-      return age;
+      const birth = moment(age);
+      const birthDate = today.diff(birth, 'years');
+      return birthDate;
     };
   
-    const age = calculateAge(birthDate);
+    const birthDate = calculateAge(age);
   
   return (
     <div className="greeting">
-      My name is {firstName} {lastName}. I am {age} years old.
+      My name is {firstName} {lastName}. I am {birthDate} years old.
     </div>
   );
 }
