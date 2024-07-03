@@ -17,7 +17,7 @@ function Greeting({ props }) {
   
   return (
     <div className="greeting">
-      Мене звуть {firstName} {lastName}. Мені {age} років.
+      My name is {firstName} {lastName}. I am {age} years old.
     </div>
   );
 }
