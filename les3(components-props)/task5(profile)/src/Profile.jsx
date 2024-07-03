@@ -2,18 +2,7 @@ import React from "react";
 import moment from "moment";
 import "./profile.scss";
 
-function Profile({ userData }) {
-  const { firstName, lastName, birthDate, birthPlace } = userData;
-
-
-  const calculateAge = (birthDate) => {
-    const today = moment();
-    const birth = moment(birthDate);
-    const age = today.diff(birth, 'years');
-    return age;
-  };
-
-  const age = calculateAge(birthDate);
+function Profile({ firstName, lastName, birthDate, birthPlace }) {
 
   return (
     <div className="profile">
