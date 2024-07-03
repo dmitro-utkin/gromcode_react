@@ -2,7 +2,8 @@ import React from "react";
 import moment from "moment";
 import "./profile.scss";
 
-function Profile({ firstName, lastName, birthDate, birthPlace }) {
+function Profile({ userData }) {
+  const { firstName, lastName, birthDate, birthPlace } = userData;
 
   return (
     <div className="profile">
