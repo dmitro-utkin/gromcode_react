@@ -2,8 +2,7 @@ import React from "react";
 import moment from "moment";
 import "./greeting.scss";
 
-function Greeting({ props }) {
-  const { firstName, lastName, birthDate } = props;
+function Greeting({ firstName, lastName, birthDate }) {
 
   const calculateAge = (birthDate) => {
     const today = moment();

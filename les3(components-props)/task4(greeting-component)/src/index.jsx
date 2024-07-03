@@ -11,4 +11,4 @@ const userInfo = {
   birthDate: "2006-10-01",
 };
 
-ReactDOM.render(<Greeting props={userInfo} />, rootElement);
+ReactDOM.render(<Greeting firstName={'John'} lastName={'Doe'} birthDate={'2006-10-01'} />, rootElement);
