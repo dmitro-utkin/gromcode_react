@@ -5,4 +5,4 @@ import Page from "./Page.jsx";
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Page unreadMessages={[]} />, rootElement);
+ReactDOM.render(<Page />, rootElement);
