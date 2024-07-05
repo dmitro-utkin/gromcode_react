@@ -10,10 +10,10 @@ class Page extends Component {
     let text;
     switch (item) {
       case "iPhone13":
-        text = "IPhone 13 - Price is 500$. Available in 2 colors";
+        text = "Price is 500$. Available in 2 colors";
         break;
       case "iPhone13Pro":
-        text = "IPhone 13 Pro - Price is 650$. Not available";
+        text = "Price is 650$. Not available";
         break;
       default:
         text = "";
