@@ -7,9 +7,9 @@ class UsersList extends React.Component {
   };
 
   toggleSorting = () => {
-    const newSorting = this.state.sorting === "asc" 
-      ? "desc" 
-      : "asc";
+    const newSorting = this.state.sorting === "desc" 
+      ? "asc" 
+      : "desc";
     this.setState({
       sorting: newSorting,
     });
@@ -26,7 +26,7 @@ class UsersList extends React.Component {
           : b.age - a.age
       )
     }
-    
+
     return (
       <div>
         <button className="btn" onClick={this.toggleSorting}>
