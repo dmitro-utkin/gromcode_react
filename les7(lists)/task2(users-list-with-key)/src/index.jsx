@@ -7,24 +7,24 @@ const rootElement = document.querySelector("#root");
 
 const users = [
   {
-    id: "id-0",
+    id: 'id-0',
     age: 21,
-    name: "Bob",
+    name: 'Bob',
   },
   {
-    id: "id-1",
+    id: 'id-1',
     age: 17,
-    name: "Tom",
+    name: 'Tom',
   },
   {
-    id: "id-2",
+    id: 'id-2',
     age: 18,
-    name: "Tom",
+    name: 'Tad',
   },
   {
-    id: "id-3",
+    id: 'id-3',
     age: 45,
-    name: "Sam",
+    name: 'Sam',
   },
 ];
 
