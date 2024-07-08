@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Life extends Component {
   _isFirstRender = true;
-  
+
   constructor(props) {
     super(props);
     console.log("constructor: good place to create state");
@@ -18,16 +18,11 @@ class Life extends Component {
     return nextProps.number % 2;
   }
 
-  _isFirstRender = true;
-
-  componentDidUpdate(prevProps) {
-    if (this._isFirstRender) {
-      this._isFirstRender = false;
-      return;
-    }
-
-    if (this.props.number !== prevProps.number) {
+  componentDidUpdate() {
+    if (!this._isFirstRender) {
       console.log("componentDidUpdate(prevProps, prevState): some updates based on new props");
+    } else {
+      this._isFirstRender = false;
     }
   }
 
