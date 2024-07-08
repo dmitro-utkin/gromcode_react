@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 class Life extends Component {
+  _isFirstRender = true;
+  
   constructor(props) {
     super(props);
     console.log("constructor: good place to create state");
