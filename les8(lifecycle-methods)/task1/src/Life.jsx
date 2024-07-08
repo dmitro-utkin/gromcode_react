@@ -16,11 +16,16 @@ class Life extends Component {
     return nextProps.number % 2;
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (!this._isFirstRender) {
-      console.log("componentDidUpdate(prevProps, prevState): some updates based on new props");
-    } else {
+  _isFirstRender = true;
+
+  componentDidUpdate(prevProps) {
+    if (this._isFirstRender) {
       this._isFirstRender = false;
+      return;
+    }
+
+    if (this.props.number !== prevProps.number) {
+      console.log("componentDidUpdate(prevProps, prevState): some updates based on new props");
     }
   }
 
