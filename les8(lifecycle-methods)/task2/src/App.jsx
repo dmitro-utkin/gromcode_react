@@ -10,17 +10,23 @@ class App extends Component {
 
     this.toggle = this.toggle.bind(this);
   }
+
   toggle = () => {
     this.setState({
       visible: !this.state.visible,
     });
   };
+
   render() {
     return (
       <>
-        <div className="clock">
-          <div className="clock__location">New York</div>
-          <div className="clock__time">7:00:51 AM</div>
+        <button className="btn" onClick={this.toggle}>
+          {this.state.visible ? "Hide" : "Show"}
+        </button>
+        <div className="clocks">
+          {this.state.visible && <Clock location="New York" offset={-5} />}
+          {this.state.visible && <Clock location="Kyiv" offset={2} />}
+          {this.state.visible && <Clock location="London" offset={0} />}
         </div>
       </>
     );

@@ -40,7 +40,7 @@ class Clock extends Component {
 
   render() {
     const { location } = this.props;
-    const { localTime } = this.state;
+    const localTime = this.getLocalTime();
 
     return (
       <div className="clock">
