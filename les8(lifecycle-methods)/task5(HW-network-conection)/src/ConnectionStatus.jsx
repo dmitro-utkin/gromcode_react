@@ -8,18 +8,22 @@ class ConnectionStatus extends Component {
     };
   }
 
-  handleStatusChange = () => {
-    this.setState({ isOnline: navigator.onLine });
+  handleOnline = () => {
+    this.setState({ isOnline: true });
+  };
+
+  handleOffline = () => {
+    this.setState({ isOnline: false });
   };
 
   componentDidMount() {
-    window.addEventListener('online', this.handleStatusChange);
-    window.addEventListener('offline', this.handleStatusChange);
+    window.addEventListener('online', this.handleOnline);
+    window.addEventListener('offline', this.handleOffline);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('online', this.handleStatusChange);
-    window.removeEventListener('offline', this.handleStatusChange);
+    window.removeEventListener('online', this.handleOnline);
+    window.removeEventListener('offline', this.handleOffline);
   }
 
   render() {
