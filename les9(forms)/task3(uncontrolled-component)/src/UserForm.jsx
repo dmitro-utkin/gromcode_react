@@ -4,7 +4,7 @@ class UserForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const formData = [...new FormData(this.target)]
+    const formData = [...new FormData(this.formRef)]
       .reduce((acc, [name, value]) => ({ ...acc, [name]: value }), 
       {},
     );
