@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-class Form extends Component {
+class UserForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const formData = [...new FormData(this.formRef)]
+    const formData = [...new FormData(this.target)]
       .reduce((acc, [name, value]) => ({ ...acc, [name]: value }), 
       {},
     );
 
-    console.log(formData);
+    this.props.onSubmit(formData);
   }
 
   setRef = (node) => {
@@ -72,4 +72,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default UserForm;
