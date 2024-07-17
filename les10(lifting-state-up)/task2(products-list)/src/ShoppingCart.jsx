@@ -16,15 +16,17 @@ class ShoppingCart extends Component {
   };
 
   render() {
-    const count = this.state.cartItems.length;
+    const { cartItems } = this.state;
+    const { userData } = this.props;
 
     return (
       <div className="column">
         <CartTitle 
-          userName={this.props.userData.firstName} 
-          count={count} />
+          userName={userData.firstName} 
+          count={cartItems.length} 
+        />
         <ProductsList 
-          cartItems={this.state.cartItems}
+          cartItems={cartItems}
         />
       </div>
     );
