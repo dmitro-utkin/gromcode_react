@@ -28,7 +28,7 @@ class Page extends Component {
           {`Hello, ${userData.firstName} ${userData.lastName}`}
         </h1>
         <main className="content">
-          <ShoppingCart userName={userData.firstName} />
+          <ShoppingCart userData={userData} />
           <Profile
             userData={userData}
             handleChange={this.handleChange}
