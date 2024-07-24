@@ -9,7 +9,11 @@ const Expand = ({ isOpen, children, title, handleToggle }) => {
         <div className="expand__header">
           <span className="expand__title">{title}</span>
           <button className="expand__toggle-btn" onClick={handleToggle}>
-            Toggle
+            <i
+              className={`expand__toggle-icon fa ${
+                isOpen ? "fa-chevron-up" : "fa-chevron-down"
+              }`}
+            ></i>
           </button>
         </div>
         {isOpen && <div className="expand__content">{children}</div>}
