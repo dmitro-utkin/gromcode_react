@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const Expand = ({ isOpen, children, title, handleToggle }) => {
+const Expand = ({ children, title }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
   const toggleIcon = isOpen ? "fa-chevron-up" : "fa-chevron-down";
 
   return (
