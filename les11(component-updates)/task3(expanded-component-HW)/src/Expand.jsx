@@ -12,7 +12,7 @@ const Expand = ({ children, title }) => {
     <div className="expand border">
       <div className="expand__header">
         <span className="expand__title">{title}</span>
-        <button className="btn" onClick={handleToggle}>
+        <button className="expand__toggle-btn" onClick={handleToggle}>
           <i className={`expand__toggle-icon fas ${toggleIcon}`}></i>
         </button>
       </div>
