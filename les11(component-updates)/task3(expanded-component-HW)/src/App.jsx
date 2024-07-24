@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import Expand from "./Expand.jsx";
 
 const App = () => {
