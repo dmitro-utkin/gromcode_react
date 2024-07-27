@@ -6,7 +6,7 @@ function Contacts() {
     <div className="page__content">
       <h1>Contacts</h1>
       <p>We are here 🗺</p>
-      <Link to="/">Go Home</Link>
+      <Link to="/">Go home</Link>
     </div>
   );
 }
