@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Task from "./Task.jsx";
+import PropTypes from "prop-types";
 import CreateTaskInput from "./CreateTaskInput..jsx";
 import {
   createTask,
@@ -9,6 +10,10 @@ import {
 } from "./tasksGateway.js";
 
 class TasksList extends Component {
+  static propTypes = {
+    onCreate: PropTypes.func.isRequired,
+  };
+
   state = {
     tasks: [],
   };
