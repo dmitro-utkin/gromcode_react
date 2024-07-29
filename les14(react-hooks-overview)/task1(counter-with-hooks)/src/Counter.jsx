@@ -6,7 +6,6 @@ const Counter = () => {
   return (
     <div className="counter">
       <button
-        data-action="decrease"
         className="counter__button"
         onClick={() => setCounter(() => counter - 1)}
       >
@@ -16,7 +15,6 @@ const Counter = () => {
         {counter}
       </span>
       <button
-        data-action="increase"
         className="counter__button"
         onClick={() => setCounter(() => counter + 1)}
       >
