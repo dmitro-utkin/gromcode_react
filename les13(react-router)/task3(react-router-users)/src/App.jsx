@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import User from "./User.jsx";
 import Home from "./Home.jsx";
 import Users from "./Users.jsx";
-import User from "./User.jsx";
 
 const App = () => {
   return (
@@ -18,12 +18,8 @@ const App = () => {
             </li>
           </ul>
           <Switch>
-            {/* Додамо маршрут для компоненти Home на корневому шляху */}
+            <Route path="/users" component={Users} />
             <Route exact path="/" component={Home} />
-            {/* Додамо маршрут для компоненти Users на шляху /users */}
-            <Route exact path="/users" component={Users} />
-            {/* Змінимо шлях маршруту для компоненти User на /users/:userId */}
-            <Route path="/users/:userId" component={User} />
           </Switch>
         </div>
       </Router>
