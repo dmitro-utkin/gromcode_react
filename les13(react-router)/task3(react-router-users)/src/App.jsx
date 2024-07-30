@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Home.jsx";
+import Users from "./Users.jsx";
 import User from "./User.jsx";
 
 const App = () => {
@@ -7,20 +9,21 @@ const App = () => {
     <div className="page">
       <Router>
         <div className="page__content">
-          <h1>Users</h1>
           <ul className="navigation">
             <li className="navigation__item">
-              <Link to="/users/github">Github</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="navigation__item">
-              <Link to="/users/facebook">Facebook</Link>
+              <Link to="/users">Users</Link>
             </li>
           </ul>
           <Switch>
+            {/* Додамо маршрут для компоненти Home на корневому шляху */}
+            <Route exact path="/" component={Home} />
+            {/* Додамо маршрут для компоненти Users на шляху /users */}
+            <Route exact path="/users" component={Users} />
+            {/* Змінимо шлях маршруту для компоненти User на /users/:userId */}
             <Route path="/users/:userId" component={User} />
-            <Route path="/">
-              <span>Select a user please</span>
-            </Route>
           </Switch>
         </div>
       </Router>
